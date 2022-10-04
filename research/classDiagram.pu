@@ -1,0 +1,52 @@
+@startuml
+
+class GPS_UART_ISR <<(I, orange)>>{
+
+}
+class NEMA_Parser {
+    friend Coordinate
+    + Coordinate readGPS();
+}
+
+class Coordinate <<(S, blue)>> {
+    + uint32_t long_
+    + uint32_t lat_
+    + operator + : Coordinates
+}
+
+class postion {
+    + Time time_ 
+}
+
+class target {
+    + int temp_ = 999
+} 
+
+cooordinate <|-- target
+cooordinate <|-- postion 
+
+
+     
+
+class time <<(S, blue)>> {
+
+}
+class PID_Controller <<(T,yellow)>>{
+
+    - const int PConstant_
+    - const int IConstant_
+    - const int DConstant_ 
+
+    - const T refrence_
+    - T previusError_;
+
+
+    + controll(T input) : T
+    + controll(T intput, T new_refrence) : T
+    + setRefrence(T new_refrence)
+    - calPgain(T error) : T 
+    - calDgain(T error) : T 
+    - calIgain(T error) : T
+}
+
+@enduml

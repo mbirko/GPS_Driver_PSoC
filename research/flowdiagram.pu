@@ -1,0 +1,29 @@
+@startuml
+
+start
+
+
+group get to target
+
+    repeat 
+    :get coordinates;
+    :get curse; 
+    :cal distance to target;
+    :cal angle to target; 
+    if (angle to target < 5) then (sail towards target)
+        :controll speed to target; 
+        :controll angle to target; 
+    else (point towards target) 
+        :kill speed; 
+        :controll angle to target; 
+    endif 
+    repeat while (At target) is (no)
+    ->yes;
+
+end group
+
+group at target
+    :hello;
+
+end group
+@enduml

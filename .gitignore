@@ -1,0 +1,80 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# DS_Store files
+.DS_Store
+
+# other stange temps
+~$*
+
+# obsidian
+*.obsidian
+
+
+### PSoCCreator ###
+# Modified from https://www.gitignore.io/?templates=psoccreator
+# You may need to add additional directories, e.g. CortexM3/
+
+# Project Settings
+*.cywrk.*
+*.cyprj.*
+
+# Generated Assets and Resources
+Debug/
+Release/
+Export/
+CortexM0/
+CortexM3/
+codegentemp
+Generated_Source
+*_datasheet.pdf
+*_timing.html
+*.cycdx
+*.cyfit
+*.rpt
+*.svd
+*.log
+*.zip
+#.swp
+*._*
+*.DS_Store
+
+# clang tidy and format
+*.format
+*.tidy
+
+# Plantuml output
+out/
+
+# VS Code
+*.vscode/
